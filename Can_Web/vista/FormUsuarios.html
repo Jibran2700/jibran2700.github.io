@@ -61,11 +61,7 @@
             <select name = "ID" >
                 
                 <option value=""></option>
-            <?php 
-            while ($Select = mysqli_fetch_array($Ids) ){
-                                ?>
-                                <option value="<?php echo $Select['ID']?>"></option>
-                            <?php } ?>
+           
                             </div>
             </div>
             <div class="f1">
@@ -75,16 +71,7 @@
             </div>
         </div>
     </form>
-    <?php
-    $ID=$_POST['ID'];
-    $usuario=$_POST['usuario'];
-    $contraseña=$_POST['contraseña'];
-    $rol=$_POST['rol'];
-    if (isset($_POST['insertar'])){
-        $ins="UPDATE usuario SET usuario = '$usuario',contraseña= '$contraseña', rol = '$rol' WHERE usuario.ID = '$ID'";
-        $sql=mysqli_query($conexion,$ins);
-        }
-        ?>
+  
 </div>
 
 <footer class="footer">
