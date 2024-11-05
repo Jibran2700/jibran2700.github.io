@@ -68,11 +68,7 @@
             <select name = "ID" >
                 
                 <option value=""></option>
-            <?php 
-            while ($Select = mysqli_fetch_array($Ids) ){
-                                ?>
-                                <option value="<?php echo $Select['ID']?>"></option>
-                            <?php } ?>
+           
                             </div>
                             <div class = "c1">
                     <input type="submit" value="Enviar" id="env" onclick="alerta()" name="insertar">
@@ -83,17 +79,7 @@
             </div>
         </div>
     </form>
-    <?php
-                $ID=$_POST['ID'];
-                $nombre=$_POST['nombre'];
-                $descripcion=$_POST['descripcion'];
-                $existencias=$_POST['existencias'];
-                $precio=$_POST['precio'];
-        if (isset($_POST['insertar'])){
-            $ins="UPDATE producto SET nombre = '$nombre', descripcion = '$descripcion', existencias = '$existencias', precio = '$precio' WHERE producto.ID = '$ID'";
-            $sql=mysqli_query($conexion,$ins);
-        }
-        ?>
+   
 </div>
 <footer class="footer">
     <table>
